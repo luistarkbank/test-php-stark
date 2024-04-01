@@ -1,5 +1,5 @@
 {
-    "name": "starkinfra/sdk",
+    "name": "starkinfra-test-deploy/sdk",
     "version": "0.8.0",
     "type": "library",
     "description": "SDK to facilitate PHP integrations with the Stark Infra API",
