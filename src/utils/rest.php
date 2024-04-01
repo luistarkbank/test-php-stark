@@ -1,0 +1,161 @@
+<?php
+
+namespace StarkInfra\Utils;
+use StarkInfra\Settings;
+use StarkCore\Utils\StarkHost;
+
+
+class Rest
+{
+    private const apiVersion = "v2";
+    private const sdkVersion = "0.8.0";
+    private const host = StarkHost::infra;
+
+    public static function getPage($user, $resource, array $query = [])
+    {
+        return \StarkCore\Utils\Rest::getPage(
+            self::getSdkVersion(),
+            self::getHost(),
+            self::getApiVersion(),
+            Settings::getUser($user),
+            $resource,
+            Settings::getLanguage(),
+            Settings::getTimeout(),
+            $query
+        );
+    }
+
+    public static function getList($user, $resource, array $query = [])
+    {
+        return \StarkCore\Utils\Rest::getList(
+            self::getSdkVersion(), 
+            self::getHost(),
+            self::getApiVersion(),
+            Settings::getUser($user),
+            $resource,
+            Settings::getLanguage(),
+            Settings::getTimeout(),
+            $query
+        );
+    }
+
+    public static function getId($user, $resource, $id, $query=[])
+    {
+        return \StarkCore\Utils\Rest::getId(
+            self::getSdkVersion(),
+            self::getHost(),
+            self::getApiVersion(),
+            Settings::getUser($user),
+            $resource,
+            $id,
+            Settings::getLanguage(),
+            Settings::getTimeout(),
+            $query
+        );
+    }
+
+    public static function getContent($user, $resource, $id, $subresourceName, $options = null)
+    {
+        return \StarkCore\Utils\Rest::getContent(
+            self::getSdkVersion(),
+            self::getHost(),
+            self::getApiVersion(),
+            Settings::getUser($user),
+            $resource,
+            $id,
+            $subresourceName,
+            Settings::getLanguage(),
+            Settings::getTimeout(),
+            $options
+        );
+    }
+
+    public static function getSubresource($user, $resource, $id, $subresource, $options = null)
+    {
+        return \StarkCore\Utils\Rest::getSubresource(
+            self::getSdkVersion(),
+            self::getHost(),
+            self::getApiVersion(),
+            Settings::getUser($user),
+            $resource,
+            $id,
+            $subresource,
+            Settings::getLanguage(),
+            Settings::getTimeout(),
+            $options
+        );
+    }
+
+    public static function post($user, $resource, $entities, $query=null)
+    {
+        return \StarkCore\Utils\Rest::post(
+            self::getSdkVersion(),
+            self::getHost(),
+            self::getApiVersion(),
+            Settings::getUser($user),
+            $resource,
+            $entities,
+            Settings::getLanguage(),
+            Settings::getTimeout(),
+            $query
+        );
+    }
+
+    public static function postSingle($user, $resource, $entity)
+    {
+        return \StarkCore\Utils\Rest::postSingle(
+            self::getSdkVersion(),
+            self::getHost(),
+            self::getApiVersion(),
+            Settings::getUser($user),
+            $resource,
+            $entity,
+            Settings::getLanguage(),
+            Settings::getTimeout()
+        );
+    }
+
+    public static function deleteId($user, $resource, $id)
+    {
+        return \StarkCore\Utils\Rest::deleteId(
+            self::getSdkVersion(),
+            self::getHost(),
+            self::getApiVersion(),
+            Settings::getUser($user),
+            $resource,
+            $id,
+            Settings::getLanguage(),
+            Settings::getTimeout()
+        );
+    }
+
+    public static function patchId($user, $resource, $id, $payload = [])
+    {
+        return \StarkCore\Utils\Rest::patchId(
+            self::getSdkVersion(),
+            self::getHost(),
+            self::getApiVersion(),
+            Settings::getUser($user),
+            $resource,
+            $id,
+            Settings::getLanguage(),
+            Settings::getTimeout(),
+            $payload
+        );
+    }
+
+    public static function getSdkVersion()
+    {
+        return self::sdkVersion;
+    }
+
+    public static function getApiVersion()
+    {
+        return self::apiVersion;
+    }
+
+    public static function getHost()
+    {
+        return self::host;
+    }
+}

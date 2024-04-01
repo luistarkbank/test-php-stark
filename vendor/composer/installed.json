@@ -1,0 +1,120 @@
+{
+    "packages": [
+        {
+            "name": "starkbank/ecdsa",
+            "version": "2.0.2",
+            "version_normalized": "2.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/starkbank/ecdsa-php.git",
+                "reference": "1e6f3027f4c038d5a4a8eecfa93a96d2d0e8401b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/starkbank/ecdsa-php/zipball/1e6f3027f4c038d5a4a8eecfa93a96d2d0e8401b",
+                "reference": "1e6f3027f4c038d5a4a8eecfa93a96d2d0e8401b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "time": "2022-10-27T21:55:02+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/ellipticcurve.php"
+                ],
+                "psr-4": {
+                    "EllipticCurve\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "StarkBank",
+                    "email": "developers@starkbank.com",
+                    "homepage": "https://starkbank.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "fast openSSL-compatible implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA)",
+            "homepage": "https://github.com/starkbank/ecdsa-php",
+            "support": {
+                "issues": "https://github.com/starkbank/ecdsa-php/issues",
+                "source": "https://github.com/starkbank/ecdsa-php/tree/v2.0.2"
+            },
+            "install-path": "../starkbank/ecdsa"
+        },
+        {
+            "name": "starkinfra/core",
+            "version": "0.1.1",
+            "version_normalized": "0.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/starkinfra/core-php.git",
+                "reference": "15049894f54d752721492492bf551c8461892583"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/starkinfra/core-php/zipball/15049894f54d752721492492bf551c8461892583",
+                "reference": "15049894f54d752721492492bf551c8461892583",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "starkbank/ecdsa": "^2.0.2"
+            },
+            "time": "2023-04-26T21:27:15+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/starkcore.php"
+                ],
+                "psr-4": {
+                    "StarkCore\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "StarkInfra",
+                    "email": "help@starkbank.com",
+                    "homepage": "https://starkinfra.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Basic SDK functionalities for the starkbank and starkinfra SDKs",
+            "homepage": "https://github.com/starkinfra/core-php",
+            "keywords": [
+                "Bank",
+                "Banking",
+                "infra",
+                "open",
+                "openbanking",
+                "stark",
+                "starkinfra"
+            ],
+            "support": {
+                "issues": "https://github.com/starkinfra/core-php/issues",
+                "source": "https://github.com/starkinfra/core-php/tree/v0.1.0"
+            },
+            "install-path": "../starkinfra/core"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

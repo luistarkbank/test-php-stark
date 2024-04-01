@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'starkinfra/sdk',
+        'pretty_version' => '0.8.0',
+        'version' => '0.8.0.0',
+        'reference' => NULL,
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'starkbank/ecdsa' => array(
+            'pretty_version' => '2.0.2',
+            'version' => '2.0.2.0',
+            'reference' => '1e6f3027f4c038d5a4a8eecfa93a96d2d0e8401b',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../starkbank/ecdsa',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'starkinfra/core' => array(
+            'pretty_version' => '0.1.1',
+            'version' => '0.1.1.0',
+            'reference' => '15049894f54d752721492492bf551c8461892583',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../starkinfra/core',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'starkinfra/sdk' => array(
+            'pretty_version' => '0.8.0',
+            'version' => '0.8.0.0',
+            'reference' => NULL,
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
